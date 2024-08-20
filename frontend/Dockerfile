@@ -1,8 +1,10 @@
 FROM node:18-alpine
 WORKDIR /app
 COPY . .
-RUN npm cache clean --force
+RUN npm cache clean --force \
+    && rm -rf node_modules package-lock.json \
+
 RUN npm install
-COPY .env.sample .env.local
+COPY ./.env.sample ./.env.local
 EXPOSE 5173
 CMD ["npm", "run", "dev", "--", "--host"]
