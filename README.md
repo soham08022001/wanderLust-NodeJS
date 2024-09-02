@@ -4,4 +4,3 @@
 </div>
 
 ![Preview Image](images/wanderlust_image.png)
-![project_pdf](images/wanderlust_project.pdf)
